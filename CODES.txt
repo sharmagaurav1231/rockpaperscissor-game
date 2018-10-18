@@ -1,0 +1,161 @@
+IF
+Declare 
+
+a number:=:a;
+ 
+Begin
+ 
+if(a=0) then 
+Dbms_output.Put_line('No is ZERO'); 
+end if;
+ --------------------------------------------------------------------
+IF-ELSE ->
+
+Declare
+
+a number :=:a;
+
+Begin
+
+if(a>0) then
+Dbms_output.Put_line('POSITIVE');
+
+else
+Dbms_output.Put_line('NEGATIVE');
+end if;
+
+end;
+ --------------------------------------------------------------------------
+ IF-ELSE-If
+
+Declare
+java number :=:java;
+oracle number :=:oracle;
+c number :=:c;
+os number :=:os;
+avg1 number;
+Begin
+avg1:=((java+oracle+c+os)/4);
+if(avg1>80) then
+Dbms_output.Put_line('first division');
+elsif(avg1>60 and avg1<80) then
+Dbms_output.Put_line('second division');
+else
+Dbms_output.Put_line('fail');
+end if;
+end;
+---------------------------------------------------------------------------
+
+SWitch
+
+
+Declare
+a number :=:a;
+
+Begin
+case a
+when 1 then
+Dbms_output.Put_line('Monday');
+when  2 then
+Dbms_output.Put_line('Tuesday');
+when  3 then
+Dbms_output.Put_line('Wednesday');
+when  4 then
+Dbms_output.Put_line('Thursday');
+when  5 then
+Dbms_output.Put_line('Friday');
+when  6 then
+Dbms_output.Put_line('Saturday');
+when  7 then
+Dbms_output.Put_line('Sunday');
+end case;
+end;
+-------------------------------------------------------
+switch
+
+Declare
+a number :=:a;
+
+Begin
+case a
+when 100 then
+Dbms_output.Put_line('first division');
+when  90 then
+Dbms_output.Put_line('second division');
+when  80 then
+Dbms_output.Put_line('third division');
+when  70 then
+Dbms_output.Put_line('fourth division');
+when  60 then
+Dbms_output.Put_line('Fail');
+else
+Dbms_output.Put_line('wrong input');
+end case;
+end;
+
+---------------------------------------------------------------
+
+for loop
+
+
+Declare
+a number :=:a;
+i number;
+
+Begin
+for i in  1 .. a loop
+Dbms_output.Put_line(i);
+end loop;
+
+
+end;
+-------------------------------------------------------------------
+for loop
+
+Declare
+a number :=:a;
+i number;
+fac number:=1;
+Begin
+for i in reverse 1 .. a loop
+fac:=fac*i;
+end loop;
+Dbms_output.Put_line(fac);
+
+
+end;
+
+---------------------------------------------------------------
+
+while 
+
+Declare
+a number :=:a;
+i number:=1;
+
+Begin
+while(i<a) loop
+Dbms_output.Put_line(i);
+i:=i+1;
+
+end loop;
+
+end;
+
+--------------------------------------------------------------------
+
+while
+
+
+Declare 
+num int:=:num; 
+rev number:=0; 
+rem number:=0; 
+Begin 
+while(num>0) loop 
+rem:=mod(num,10); 
+rev:=(rev*10)+rem; 
+num:=num/10; 
+end loop; 
+Dbms_output.Put_line(rev); 
+end;
